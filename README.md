@@ -14,13 +14,13 @@
 
 ![alt text](https://github.com/Vigneshbaalaji/ViSiX_A_Deep_Learning_Model_for_Image_Captioning_using_Inception_V3_and_Stacked_LSTM_with_Attention/blob/main/Arch_Diagram.png?raw=true)
 
-### IMPLEMENTATION WITH MICROSOFT COMMON OBJECTS IN CONTEXT (MS-COCO) DATASET
+### APPROACH-1: IMPLEMENTATION WITH MICROSOFT COMMON OBJECTS IN CONTEXT (MS-COCO) DATASET
 
 <p align='justify'> A sample of 6000 images out of a total of 82,000 images with its corresponding captions from the MS COCO Dataset is used for training our model. After splitting the data into train and validation sets, the images are passed to the pre-trained Inception V3 model for extraction of features. The images are initially preprocessed by resizing and also normalizing.</p>
   
 <p align='justify'> Simultaneously, the captions are preprocessed by tokenizing and unique words are obtained. The vocabulary size is reduced to the size of 5000 words followed by creating word-to-index and index-to-word mappings, and all the sequences are padded to the same size. The data is now split into training and testing data. For caption generation, attention-based model is used for caption generation Hence using this attention mechanism, the model is trained. The attention model consists of CNN encoder and RNN decoder. This helps us fetching more contextual information. Then, to capture both the forward and reverse relationship of the sequence, we use Bidirectional LSTM. </p>
 
-### IMPLEMENTATION WITH FLICKR 8K DATASET
+### APPROACH-2: IMPLEMENTATION WITH FLICKR 8K DATASET
 
 <p align='justify'> The Flickr 8K dataset consisting of 8000 images are already split into train and test set.  Transfer Learning is incorporated by choosing one of the pre-trained models like Xception, VGG16, ResNet, Inception V3.  Contrast Limited Adaptive Histogram Equalization (CLAHE) is a variant of Adaptive histogram equalization (AHE) which takes care of over-amplification of the contrast. CLAHE operates on small regions in the image, called tiles, rather than the entire image. The neighboring tiles are then combined using bilinear interpolation to remove the artificial boundaries. This algorithm can be applied to improve the contrast of images.</p>
  
@@ -34,3 +34,14 @@
 
 ## OUTPUT SCREENSHOTS
 
+<table style="width:100%">
+  
+  <tr>
+    <th>APPROACH-1: Trained on MS-COCO Dataset</th>
+    <th>APPROACH-2: Trained on Flickr8K Dataset</th>
+  </tr>
+  
+  <tr>
+    <td><img alt="APPROACH-1: Trained on MS-COCO Dataset" src="https://github.com/Vigneshbaalaji/ViSiX_A_Deep_Learning_Model_for_Image_Captioning_using_Inception_V3_and_Stacked_LSTM_with_Attention/blob/main/MS_COCO_Model_Output.JPG" /> </td>
+    <td><img alt="APPROACH-2: Trained on Flickr8K Dataset" src="https://github.com/Vigneshbaalaji/ViSiX_A_Deep_Learning_Model_for_Image_Captioning_using_Inception_V3_and_Stacked_LSTM_with_Attention/blob/main/Flickr_Model_Output.png" /> </td>
+  </tr>
